@@ -117,7 +117,7 @@
         localStorage.setItem("loggedInUser", JSON.stringify(studentUser));
         
         alert("Student Login successful!");
-        window.location.href = "student/home.html";
+        window.location.href = "frontend/student/home.html";
       } else {
         errorMessage.style.display = "block";
         errorMessage.textContent = "Invalid username or password. Please try again.";
@@ -150,7 +150,7 @@
         localStorage.setItem("loggedInUser", JSON.stringify(clubUser));
         
         alert("Club Login successful!");
-        window.location.href = "club/homeclub.html";
+        window.location.href = "frontend/club/homeclub.html";
       } else {
         errorMessage.style.display = "block";
         errorMessage.textContent = "Invalid username or password. Please try again.";
