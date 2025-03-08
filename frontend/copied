@@ -1,0 +1,138 @@
+<section id="events" class="section bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">CBIT EVENTS</h2>
+    <div class="row g-4">
+      <!-- Event Card 1 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">Indo-US Workshop on Distributed Generation</h5>
+            <p class="card-text">
+              Department of EEE is organizing an Indo-US Workshop titled "Advancing Distributed Generation: Renewable Integration, Impacts, and Smart Grid Solutions".<br>
+              Dates: 10th to 14th March 2025
+            </p>
+            <a href="https://forms.gle/5Lx6hUo49FrSQqDA6" target="_blank" class="btn btn-primary btn-sm">Register</a>
+            <a href="https://www.cbit.ac.in/wp-content/uploads/2025/03/EEE-Indo-US-Workshop-Brochure-05.03.2025.pdf" target="_blank" class="btn btn-secondary btn-sm">Download Brochure</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 2 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">FDP on AR/VR</h5>
+            <p class="card-text">
+              Department of Computer Science and Engineering is organizing a Faculty Development Programme on Augmented Reality and Virtual Reality (AR/VR).<br>
+              Dates: 3rd to 7th March 2025
+            </p>
+            <a href="https://forms.gle/6cnM7BUHWhLruakt9" target="_blank" class="btn btn-primary btn-sm">Register</a>
+            <a href="https://www.cbit.ac.in/wp-content/uploads/2025/02/CSE_FDP_AR-VR19.02.2025.pdf" target="_blank" class="btn btn-secondary btn-sm">Download Brochure</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 3 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">Shruthi-2025: National Students Fest</h5>
+            <p class="card-text">
+              Chaitanya Bharathi Institute of Technology proudly announces Shruthi-2025, “HALCYON”: The Ultimate Celebration of Innovation, Talent, and Unity.<br>
+              Dates: 06-08 March 2025
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 4 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">Ethical Hacking &amp; Bug Bounty Workshop</h5>
+            <p class="card-text">
+              A 2-day immersive workshop on Ethical Hacking &amp; Bug Bounty organized by the Department of Computer Science and Engineering.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 5 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">TechfusionX EV Saksham</h5>
+            <p class="card-text">
+              Department of Mechanical Engineering, AI &amp; ML &amp; Praheti Racing SAE - CBIT is organizing a Five-Day workshop on “TechfusionX EV Saksham”.<br>
+              Dates: 20th to 24th February 2025
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 6 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">TechfusionX GenAI Saksham</h5>
+            <p class="card-text">
+              A Four-Day workshop on “TechfusionX GenAI Saksham” in association with Capabl.<br>
+              Dates: 15th–16th &amp; 22nd–23rd February 2025
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 7 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">Boot Camp on CAD Design to 3D Printing</h5>
+            <p class="card-text">
+              Department of Mechanical Engineering in association with NIELIT, Aurangabad is organizing a Five Days Boot Camp on "CAD Design to 3D Printing-Foundation Details".<br>
+              Dates: February 17th - 21st, 2025
+            </p>
+            <a href="https://forms.gle/bjdxhJmtvm37vWrw9" target="_blank" class="btn btn-primary btn-sm">Register</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 8 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">Bootcamp on Mobile Security</h5>
+            <p class="card-text">
+              Department of Computer Engineering &amp; Technology organizes a Bootcamp on Emerging Trends in Mobile Security.<br>
+              Dates: 1st February to 22nd February 2025
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 9 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">International Conference on Transforming Education</h5>
+            <p class="card-text">
+              Organized by the Department of School of Management Studies and Mechanical Engineering, sponsored by ICSSR, New Delhi.<br>
+              Dates: 14th – 15th February 2025
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Event Card 10 -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">ISTTP on AI-Driven Autonomous Systems</h5>
+            <p class="card-text">
+              Department of IT in association with SCRS &amp; CSI is organizing a Two-Week Online International Short-Term Training Program on "AI-Driven Autonomous Systems: Applications and Innovations".<br>
+              Dates: 27th January to 8th February 2025
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

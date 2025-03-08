@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Timeline - Community-CBIT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: #dee2e6;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      margin: 2rem 0;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: #0d6efd;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .timeline-content {
+      position: relative;
+      width: 45%;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 0.5rem;
+    }
+    .timeline-item:nth-child(odd) .timeline-content {
+      left: 0;
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+      left: 55%;
+    }
+    @media (max-width: 767px) {
+      .timeline::before {
+        left: 8px;
+      }
+      .timeline-item::before {
+        left: 8px;
+      }
+      .timeline-content {
+        width: calc(100% - 30px);
+        left: 30px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+  <div class="container my-5">
+    <h1 class="text-center mb-5">Event Timeline - 2024</h1>
+    
+    <div class="mb-4 text-center">
+      <h5>Legend</h5>
+      <ul class="list-inline">
+        <li class="list-inline-item me-3">
+          <span class="badge" style="background-color: #dc3545;">Not Conducted</span>
+        </li>
+        <li class="list-inline-item me-3">
+          <span class="badge" style="background-color: #0d6efd;">Need to be Conducted</span>
+        </li>
+        <li class="list-inline-item me-3">
+          <span class="badge" style="background-color: #ffc107; color: #000;">Today</span>
+        </li>
+        <li class="list-inline-item">
+          <span class="badge" style="background-color: #198754;">Done</span>
+        </li>
+      </ul>
+    </div>
+    
+    <ul class="timeline">
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">02.01.2024</h5>
+          <p><strong>Organization:</strong> JLL CBIT</p>
+          <p><strong>Topic:</strong> Group Discussion</p>
+          <p><strong>Speaker:</strong> Sophia (BE-Civil, Mechanical & ME-Structural Students)</p>
+          <p><strong>Venue:</strong> Virtual Group Discussion</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #198754;">Done</span></p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">02.01.2024</h5>
+          <p><strong>Organization:</strong> Medha Servo Drives Pvt. Ltd</p>
+          <p><strong>Topic:</strong> NBA-PG FPC Meetings</p>
+          <p><strong>Speaker:</strong> Dr. NLN Reddy, Advisor-CDC</p>
+          <p><strong>Attended By:</strong> All FPCs</p>
+          <p><strong>Venue:</strong> Technical & HR Interviews</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #0d6efd;">Need to be Conducted</span></p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">03.01.2024</h5>
+          <p><strong>Organization:</strong> Cognizant</p>
+          <p><strong>Topic:</strong> Campus Hiring 2024</p>
+          <p><strong>Speaker:</strong> Aswathy Venugopal</p>
+          <p><strong>Attended By:</strong> Placement Officers</p>
+          <p><strong>Venue:</strong> Placement Office, Board Room Meeting</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #198754;">Done</span></p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">04.01.2024</h5>
+          <p><strong>Organization:</strong> Medha Servo Drives Pvt. Ltd</p>
+          <p><strong>Topic:</strong> Virtual Meeting on Process Improvement</p>
+          <p><strong>Speaker:</strong> Dr. T. Prathima</p>
+          <p><strong>Venue:</strong> Virtual Meeting</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #dc3545;">Not Conducted</span></p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">06.01.2024</h5>
+          <p><strong>Organization:</strong> Virtusa</p>
+          <p><strong>Topic:</strong> Technical & HR Interviews</p>
+          <p><strong>Speaker:</strong> Panel Discussion</p>
+          <p><strong>Venue:</strong> Interview Rooms</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #ffc107; color: #000;">Today</span></p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">09.01.2024</h5>
+          <p><strong>Organization:</strong> Winfo Solutions</p>
+          <p><strong>Topic:</strong> Industry Institute Interaction</p>
+          <p><strong>Speaker:</strong> Technical Panel</p>
+          <p><strong>Venue:</strong> Conference Hall</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #0d6efd;">Need to be Conducted</span></p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">10.01.2024</h5>
+          <p><strong>Organization:</strong> MetLife</p>
+          <p><strong>Topic:</strong> Group Discussion</p>
+          <p><strong>Speaker:</strong> Industry Expert</p>
+          <p><strong>Venue:</strong> Virtual Meeting</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #dc3545;">Not Conducted</span></p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">10.01.2024</h5>
+          <p><strong>Organization:</strong> Cognizant</p>
+          <p><strong>Topic:</strong> Technical & HR Interviews</p>
+          <p><strong>Speaker:</strong> HR Panel</p>
+          <p><strong>Venue:</strong> Interview Rooms</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #ffc107; color: #000;">Today</span></p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">11.01.2024</h5>
+          <p><strong>Organization:</strong> Aveva</p>
+          <p><strong>Topic:</strong> Industry Institute Interaction</p>
+          <p><strong>Speaker:</strong> Panel Discussion</p>
+          <p><strong>Venue:</strong> Online Exam & Group Discussion</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #198754;">Done</span></p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">12.01.2024</h5>
+          <p><strong>Organization:</strong> Servicenow</p>
+          <p><strong>Topic:</strong> Campus Hiring & Interviews</p>
+          <p><strong>Speaker:</strong> HR Panel</p>
+          <p><strong>Venue:</strong> Virtual Meeting</p>
+          <p><strong>Status:</strong> <span class="badge" style="background-color: #198754;">Done</span></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="footer-placeholder"></div>
+  <script src="includes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

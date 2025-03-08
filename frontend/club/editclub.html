@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Club Profile - Community-CBIT</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body { overflow-x: hidden; }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70">
+<div id="nav-placeholder"></div>
+<main class="container my-4">
+  <h1 class="text-center mb-4">Edit Club Profile</h1>
+  <form id="editClubForm">
+    <div class="mb-3">
+      <label for="clubName" class="form-label">Club Name</label>
+      <input type="text" class="form-control" id="clubName" placeholder="Enter club name" required>
+    </div>
+    <div class="mb-3">
+      <label for="clubEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="clubEmail" placeholder="Enter club email" required>
+    </div>
+    <div class="mb-3">
+      <label for="clubBio" class="form-label">About Club</label>
+      <textarea class="form-control" id="clubBio" rows="4" placeholder="Describe your club" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="clubLogo" class="form-label">Upload Club Logo</label>
+      <input type="file" class="form-control" id="clubLogo" accept=".png,.jpg,.jpeg" required>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Update Profile</button>
+  </form>
+</main>
+<div id="footer-placeholder"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="includes.js"></script>
+<script>
+document.getElementById("editClubForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Club profile updated!");
+  window.location.href = "homeclub.html";
+});
+</script>
+</body>
+</html>

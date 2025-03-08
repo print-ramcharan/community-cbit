@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community-CBIT - Profile</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  
+  <main class="container my-4">
+    <h1 class="text-center">User Profile</h1>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img id="profilePic" src="/frontend/images/student.jpeg" class="img-fluid rounded-circle mb-3" alt="Profile Picture">
+        <h4 id="profileName">Name X</h4>
+        <p id="profileEmail">Email: user@example.com</p>
+        <p id="memberSince">Member since: 2024</p>
+      </div>
+      <div class="col-md-8">
+        <h3>About Me</h3>
+        <p id="profileBio">
+          This is a brief bio about the user. They are an active member of the community with interests in academics, clubs, and events.
+        </p>
+        <h3>Recent Activity</h3>
+        <ul class="list-group" id="recentActivity">
+          <li class="list-group-item">Joined the Coding Club</li>
+          <li class="list-group-item">Registered for Hackathon 2024</li>
+          <li class="list-group-item">Updated profile information</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  
+  <div id="footer-placeholder"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="includes.js"></script>
+  
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const userStr = localStorage.getItem("loggedInUser");
+      if (!userStr) {
+        window.location.href = "login.html";
+        return;
+      }
+      const user = JSON.parse(userStr);
+      
+      document.getElementById("profileName").textContent = user.name || "Name Unavailable";
+      document.getElementById("profileEmail").textContent = "Email: " + (user.email || "Not Provided");
+      document.getElementById("memberSince").textContent = "Member since: " + (user.memberSince || "2024");
+      document.getElementById("profilePic").src = user.profilePic || "/frontend/images/student.jpeg";
+      document.getElementById("profileBio").textContent = user.bio || "This is a brief bio about the user. They are an active member of the community with interests in academics, clubs, and events.";
+      
+      if (user.recentActivity && Array.isArray(user.recentActivity)) {
+        const activityList = document.getElementById("recentActivity");
+        activityList.innerHTML = "";
+        user.recentActivity.forEach(activity => {
+          const li = document.createElement("li");
+          li.className = "list-group-item";
+          li.textContent = activity;
+          activityList.appendChild(li);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

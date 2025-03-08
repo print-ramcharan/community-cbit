@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club Events - Community-CBIT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    html, body { overflow-x: hidden; }
+    .navbar { background-color: #6f42c1; }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    .hero { background: url('/frontend/images/club_banner.jpg') no-repeat center center/cover; height: 300px; }
+    .timeline { position: relative; margin: 2rem 0; padding: 0; list-style: none; }
+    .timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #6f42c1; transform: translateX(-50%); }
+    .timeline-item { position: relative; margin: 2rem 0; }
+    .timeline-item::before { content: ''; position: absolute; top: 0; left: 50%; width: 20px; height: 20px; background: #6f42c1; border-radius: 50%; transform: translate(-50%, -50%); }
+    .timeline-content { position: relative; width: 45%; padding: 1rem; background: #f8f9fa; border-radius: 0.5rem; }
+    .timeline-item:nth-child(odd) .timeline-content { left: 0; }
+    .timeline-item:nth-child(even) .timeline-content { left: 55%; }
+    @media (max-width: 767px) {
+      .timeline::before { left: 8px; }
+      .timeline-item::before { left: 8px; }
+      .timeline-content { width: calc(100% - 30px); left: 30px !important; }
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="homeclub.html">CBIT Open Source Club</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="homeclub.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="events_club.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="applications_club.html">Applications</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile_club.html">Profile</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="clubProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle" style="font-size:1.8rem; margin-right:5px;"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="clubProfileDropdown">
+              <li><a class="dropdown-item" href="profile_club.html">View Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#" id="logoutLink">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <main class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 id="eventsSection" class="mb-0">Upcoming Events</h2>
+      <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#postEventModal">Post Event</button>
+    </div>
+    <ul class="timeline" id="eventsTimeline">
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">Hacktoberfest 2024</h5>
+          <p class="mb-0">26 - 27 October 2024</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">ReactJS &amp; FastAPI Bootcamp</h5>
+          <p class="mb-0">13 - 14 August 2024</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">Git &amp; Github Bootcamp</h5>
+          <p class="mb-0">27 April 2024</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">GSoC Awareness Session 2024</h5>
+          <p class="mb-0">13 March 2024</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h5 class="mb-1">OpenSys 2024</h5>
+          <p class="mb-0">26 - 27 February 2024</p>
+        </div>
+      </li>
+    </ul>
+  </main>
+  
+  <div id="footer-placeholder"></div>
+  
+  <div class="modal fade" id="postEventModal" tabindex="-1" aria-labelledby="postEventModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="postEventModalLabel">Post a New Event</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="postEventForm">
+            <div class="mb-3">
+              <label for="eventTitle" class="form-label">Event Title</label>
+              <input type="text" class="form-control" id="eventTitle" placeholder="Enter event title" required>
+            </div>
+            <div class="mb-3">
+              <label for="eventDates" class="form-label">Event Dates</label>
+              <input type="text" class="form-control" id="eventDates" placeholder="Enter event dates" required>
+            </div>
+            <div class="mb-3">
+              <label for="eventDescription" class="form-label">Description</label>
+              <textarea class="form-control" id="eventDescription" rows="3" placeholder="Enter event description" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Post Event</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("logoutLink").addEventListener("click", function(e) {
+      e.preventDefault();
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "login_club.html";
+    });
+    document.getElementById("postEventForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const title = document.getElementById("eventTitle").value.trim();
+      const dates = document.getElementById("eventDates").value.trim();
+      const description = document.getElementById("eventDescription").value.trim();
+      const li = document.createElement("li");
+      li.className = "timeline-item";
+      li.innerHTML = `
+        <div class="timeline-content">
+          <h5 class="mb-1">${title}</h5>
+          <p class="mb-0">${dates}</p>
+          <p>${description}</p>
+        </div>
+      `;
+      document.getElementById("eventsTimeline").appendChild(li);
+      bootstrap.Modal.getInstance(document.getElementById('postEventModal')).hide();
+      this.reset();
+    });
+  </script>
+  <script src="includes.js"></script>
+</body>
+</html>
